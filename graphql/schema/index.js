@@ -7,7 +7,6 @@ const validUrl = require("valid-url");
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
   type Query {
-    hello: String
     urlShortners: [UrlShortner!]
   }
 
@@ -36,7 +35,6 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => "Hello World!",
     urlShortners: async () => {
       return await UrlShortner.find();
     },
