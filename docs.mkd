@@ -1,0 +1,82 @@
+// tech
+Yarn
+Node
+GraphQL
+MongoDB - db
+Mongoose - ODM (Object Document Mapping)
+Nodemon
+// end tech
+
+// mongodb.com
+create collection
+
+- database name
+- create collection name
+
+database access (adding user)
+
+connection domain
+
+- cluster (connect)
+  - connect your application
+-
+
+// end mongodb.com
+
+MongoDB(DB)
+-- we create schema first( properties of the model, describe model )
+-- then create model (User, Url...) -> get,save,delete, update
+
+-- model -- allow communicate with the Blog Schema (get, post, delete, etc.)
+
+// model
+URLShortenr
+-- (schema)
+
+- originalUrl
+- shortUrl
+- url
+- createdAt
+- updatedAt
+
+---
+
+1. add all the dependencies
+   a. yarn add graphql apollo-server-express body-parser cors
+   b. yarn add -D @babel/core @babel/node nodemon
+
+2. add all the boilerplate
+   a. add the api/status/
+   b. add hello world with apollo graphql
+   c. add cors
+
+3. Add the database connection mongo db
+   a. add mongoose ODM
+   b. create db
+   c. add mongoose connection
+
+   3.1
+   a. add models folder
+   b. UrlShortner.js
+   // model
+   URLShortenr
+   -- (schema)
+   -- originalUrl
+   -- shortUrl
+   -- url
+   -- createdAt
+   -- updatedAt
+
+4. create mutation to save UrlShortner
+   -- add shortid package to generate
+   -- add valid-url to validate url (AFTER initial setup)
+
+5. add the get request to redirect to that url
+
+(LAST) add .babelrc
+{
+"presets": ["@babel/preset-env"]
+}
+"@babel/core": "^7.12.10",
+"@babel/node": "^7.12.10",
+"@babel/preset-env": "^7.12.10",
